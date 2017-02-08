@@ -17,7 +17,7 @@ program water_quality
         ! test cases
         call cpu_time ( cpu_time_start )
 
-            write ( *, "( /, 'Running FORESEE ...' )" )
+            write ( *, "( /, 'Running CE-QUAL-W2 ...' )" )
 
         call cpu_time ( cpu_time_stop  )
         cpu_time_elapsed = cpu_time_stop - cpu_time_start

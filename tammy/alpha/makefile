@@ -55,6 +55,8 @@ clean:
 $(PRG_OBJ) : $(MOD_OBJS)
 
 # Module interdepencies
+mod_allocator.o               :
+mod_control.o                 : mod_set_precision.o
 mod_constants.o               : mod_set_precision.o
 mod_file_handling.o           :
 mod_mpif_sgi.o                :
