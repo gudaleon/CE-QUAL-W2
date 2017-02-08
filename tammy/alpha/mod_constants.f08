@@ -16,4 +16,7 @@ module mConstants
     ! formats
     character ( len = * ), parameter :: fmt_generic = '( * ( g0 ) )'
 
+    ! messages
+    character ( len = * ), parameter :: error_fatal = 'Halting on fatal error . . .'
+
 end module mConstants

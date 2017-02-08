@@ -6,14 +6,14 @@ module mControl
     implicit none
 
     type :: control
-    ! rank 3
-    real ( rp ),    allocatable, dimension ( : , : , : ) :: C2, CD
-    ! rank 2
-    ! rank 1
-    integer ( ip ), allocatable, dimension ( : )         :: SSAC, ALAC
-    ! rank 0
-    integer ( ip )                                       :: IMX, KMX, UNIT, NERR, NWRN, NASS, NALL, NBOD
-    logical                                              :: DELETE_ERR, DELETE_WRN
+        ! rank 3
+        real ( rp ),    allocatable, dimension ( : , : , : ) :: C2, CD
+        ! rank 2
+        ! rank 1
+        integer ( ip ), allocatable, dimension ( : )         :: SSAC, ALAC
+        ! rank 0
+        integer ( ip )                                       :: IMX, KMX, UNIT, NERR, NWRN, NASS, NALL, NBOD
+        logical                                              :: DELETE_ERR, DELETE_WRN
     ! contains
     !     private
     !     procedure, public :: allocator      =>  allocator_sub

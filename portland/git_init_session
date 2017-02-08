@@ -1,0 +1,452 @@
+rditldmt@ITLDMT-MD-O2034:CE-QUAL-W2 $ git init
+Initialized empty Git repository in /Users/rditldmt/Documents/GitHub_Desktop/CE-QUAL-W2/.git/
+rditldmt@ITLDMT-MD-O2034:CE-QUAL-W2 $ git add .
+git commit -m "rditldmt@ITLDMT-MD-O2034:CE-QUAL-W2 $ git commit -m "initial commit"
+[master (root-commit) ed2ba84] initial commit
+ 432 files changed, 2094069 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100755 data/Executables/LGN_Met_WY10_14WS_bwb.npt
+ create mode 100755 data/Executables/LWG_BR1_GAGED_TIN.npt
+ create mode 100755 data/Executables/LWG_BR1_TIN.npt
+ create mode 100755 data/Executables/LWG_BR2_GAGED_TIN.npt
+ create mode 100755 data/Executables/LWG_BR2_TIN.npt
+ create mode 100755 data/Executables/LWG_BTH_012717.npt
+ create mode 100755 data/Executables/LWG_BTH_Final.npt
+ create mode 100755 data/Executables/LWG_BTH_Final_Run07.npt
+ create mode 100755 data/Executables/LWG_ELWS_WY10.npt
+ create mode 100755 data/Executables/LWG_RUN01_BR1_QIN.npt
+ create mode 100755 data/Executables/LWG_RUN01_BR1_QIN_DAILY.npt
+ create mode 100755 data/Executables/LWG_RUN01_BR2_QIN.npt
+ create mode 100755 data/Executables/LWG_RUN01_BR2_QIN_DAILY.npt
+ create mode 100755 data/Executables/LWG_RUN01_GDAC_BR1_QGT.npt
+ create mode 100755 data/Executables/LWG_RUN01_GDAC_BR1_QGT_DAILY.npt
+ create mode 100755 data/Executables/LWG_SHD.npt
+ create mode 100755 data/Executables/LWG_WSC.npt
+ create mode 100755 data/Executables/MET_WY10_LBRW_14WS.npt
+ create mode 100755 data/Executables/graph.npt
+ create mode 100755 data/Executables/preW2-37_64_052115.exe
+ create mode 100755 data/Executables/w2_con.npt
+ create mode 100755 data/Executables/w2_ivf64_v372_052115.exe
+ create mode 100755 data/LWG_Run04_012717/LWG-PEST-dataCreation.prn
+ create mode 100755 data/LWG_Run04_012717/LWG-PEST-dataCreation.xlsm
+ create mode 100755 data/LWG_Run04_012717/LWG-PEST-dataCreation_pest_ins_help.prn
+ create mode 100755 data/LWG_Run04_012717/LWG-Run04-012717-WY10-ScrollPlots.xlsm
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_cpl.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_snp.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_spr.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_1_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_2_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_3_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_4_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_5_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_6_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_7_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_8_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_tsr_9_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/LWG_Run04_012717_vpl.w2l
+ create mode 100755 data/LWG_Run04_012717/PREW2CodeCompilerVersion.opt
+ create mode 100755 data/LWG_Run04_012717/W2CodeCompilerVersion.opt
+ create mode 100755 data/LWG_Run04_012717/pre.opt
+ create mode 100755 data/LWG_Run04_012717/pre.wrn
+ create mode 100755 data/LWG_Run04_012717/qwo_43.opt
+ create mode 100755 data/LWG_Run04_012717/qwo_gate1_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/qwo_gate2_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/qwo_gate3_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/qwo_gate4_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/two_43.opt
+ create mode 100755 data/LWG_Run04_012717/two_gate1_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/two_gate2_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/two_gate3_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/two_gate4_seg43.opt
+ create mode 100755 data/LWG_Run04_012717/w2.err
+ create mode 100755 data/LWG_Run04_012717/w2_con.npt
+ create mode 100755 data/LWG_Run04_012717/wl.opt
+ create mode 100755 portland/V4/Excel macro utility for writing files in W2 format from Excel/Excel Macro Utility for CE-QUAL-W2.pdf
+ create mode 100755 portland/V4/Excel macro utility for writing files in W2 format from Excel/w2tools_L.xlam
+ create mode 100755 portland/V4/Excel macro utility for writing files in W2 format from Excel/w2tools_examples.xlsx
+ create mode 100755 portland/V4/Sediment diagenesis documentation/CEMA Oil Sands Pit Lake Model May 2011.pdf
+ create mode 100755 portland/V4/Sediment diagenesis documentation/Prakash Vandenberg Buchak 2014 Sediment Diagenesis Part 2.pdf
+ create mode 100755 portland/V4/Sediment diagenesis documentation/Updating the CEMA OSPLM Report Aug2014.pdf
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/README.txt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_blowout_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_blowout_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_boxCan_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_boxCan_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_breitenbush_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_breitenbush_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_french_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_french_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_kinney_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_kinney_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_met_stay_raws.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_nsboulder_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_nsboulder_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_pre_detroit.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_pre_detroit2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_pre_detroit3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_pre_detroit4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_qdt_br1_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_qdt_br2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_qdt_br3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_qdt_br4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_qot_det_example.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tdt_br1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tdt_br2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tdt_br3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tdt_br4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tpr_detroit.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tpr_detroit2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tpr_detroit3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/0609_tpr_detroit4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/alldetroitnewbathym
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/dynsplit_selective1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/graph.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/shade.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/w2_con.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/w2_selective.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example3/wsc.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_blowout_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_blowout_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_boxCan_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_boxCan_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_breitenbush_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_breitenbush_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_french_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_french_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_kinney_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_kinney_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_met_stay_raws.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_nsboulder_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_nsboulder_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_pre_detroit.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_pre_detroit2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_pre_detroit3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_pre_detroit4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_qdt_br1_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_qdt_br2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_qdt_br3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_qdt_br4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_qot_det_example.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tdt_br1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tdt_br2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tdt_br3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tdt_br4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tpr_detroit.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tpr_detroit2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tpr_detroit3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/0609_tpr_detroit4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/alldetroitnewbathym
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/dynsplit_selective1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/graph.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/shade.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/w2_con.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/w2_selective.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_multigate_example4/wsc.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_blowout_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_blowout_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_boxCan_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_boxCan_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_breitenbush_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_breitenbush_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_french_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_french_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_kinney_q_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_kinney_t_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_met_stay_raws.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_nsboulder_q.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_nsboulder_t.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_pre_detroit.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_pre_detroit2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_pre_detroit3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_pre_detroit4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_qdt_br1_est.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_qdt_br2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_qdt_br3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_qdt_br4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_qot_det_max70_11-25-2013.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tdt_br1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tdt_br2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tdt_br3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tdt_br4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tpr_detroit.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tpr_detroit2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tpr_detroit3.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/0609_tpr_detroit4.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/alldetroitnewbathym
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/dynsplit_selective1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/graph.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/shade.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/w2_con.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/w2_selective.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/det_normal_uro-float_400fmin/wsc.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/2002_0.9percentgw_tdt.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/2002_LEES_met.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/2002_LOP_qdt.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/2002_dex_qdt_base.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/2002_lop_qot_base.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/CY2002_lop_qot_dex_calculated.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/MFQ.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/MFT.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/bth_wb1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/bth_wb2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/dynsplit_selective1.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/dynsplit_selective2.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/graph.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/pre_2002_AgriMet.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/shd.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/tdt.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/tpr_2002_AgriMet.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/w2_con.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/w2_selective.npt
+ create mode 100755 portland/V4/USGS Examples for using USGS Auto Port Selection Algorithm/lop-dex_lopFloat_20ppmin/wsc.npt
+ create mode 100755 portland/V4/USGS documentation for using USGS Auto Port Selection Algorithm/USGS Report on Improved Algorithms_ofr2015-1027.pdf
+ create mode 100755 portland/V4/W2ControlGUI/GUI interfacev37.pdf
+ create mode 100755 portland/V4/W2V3 manual40_rev7.pdf
+ create mode 100755 portland/V4/W2_Version_4.0_Release_Notes.pdf
+ create mode 100755 portland/V4/W2tools post-processor integrated with W2control preprocessor/20140623 W2Tool-setup-Release.exe
+ create mode 100755 portland/V4/W2tools post-processor integrated with W2control preprocessor/W2_Post_Quick_Guide (Rev03).pdf
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/bth.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/cdh_br1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/cin_br1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/cin_br2.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr10.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr11.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr12.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr13.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr14.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr15.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr16.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr17.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr2.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr3.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr4.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr5.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr6.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr7.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr8.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ctr_tr9.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/edh_br1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/graph.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/met.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qin_br1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qin_br2.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr10.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr11.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr12.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr13.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr14.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr15.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr16.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr17.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr2.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr3.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr4.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr5.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr6.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr7.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr8.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/qtr_tr9.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/shade.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/tdh_br1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/tin_br1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/tin_br2.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr1.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr10.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr11.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr12.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr13.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr14.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr15.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr16.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr17.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr2.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr3.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr4.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr5.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr6.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr7.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr8.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/ttr_tr9.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/w2_con.npt
+ create mode 100755 portland/V4/examples/Columbia Slough Estuary/wsc.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/bth.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/bth_2m.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/cin_br1.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/dynpump1.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/dynselective1.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/graph.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/met.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/prf_dam.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/qin_br1.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/qot_br1.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/shade.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/tin_br1.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/vpr.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/w2_aerate.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/w2_con.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/w2_envirprf.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/w2_habitat.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/w2_selective.npt
+ create mode 100755 portland/V4/examples/DeGray Reservoir/wsc.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/W2_CEMA_Input.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/bth.csv
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/bth.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cdt_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cdt_br2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cdt_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cin_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cin_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cin_br4.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cin_br5.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cin_br6.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cin_br7.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br4.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br5.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br6.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/cpr_br7.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ctr_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ctr_tr1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ctr_tr2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ctr_tr3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/graph.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/lpr.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/met_avgq.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pH_buffering.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br4.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br5.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br6.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/pre_br7.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qdt_br1_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qdt_br2_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qgt.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qin_br1_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qin_br3_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qin_br4_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qin_br5_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qin_br6.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qin_br7_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qot_br2_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qpre.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qtr_tr1_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qtr_tr2_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/qtr_tr3_avg.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/shade.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tdt_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tdt_br2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tdt_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tin_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tin_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tin_br4.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tin_br5.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tin_br6.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tin_br7.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br4.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br5.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br6.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/tpr_br7.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ttr_tr1.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ttr_tr2.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/ttr_tr3.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/w2_amaila.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/w2_con.npt
+ create mode 100755 portland/V4/examples/Sediment diagenesis example/wsc.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/HangT01.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/SPKwwtpQ01.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/SPKwwtpT01.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/Shade.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/bth1.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/cdt8.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/cdt9.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/cin.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/graph.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/hangmanc.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/hangq01.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/lpr.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/lpr.xlsx
+ create mode 100755 portland/V4/examples/Spokane River csv input format/met.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/qdt_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/qdt_br9.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/qin_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/qtr_zero.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/spokanewwtpc.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/tdt_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/tdt_br9.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/tin_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/vpr.csv
+ create mode 100755 portland/V4/examples/Spokane River csv input format/vpr_csv.xlsx
+ create mode 100755 portland/V4/examples/Spokane River csv input format/w2_aerate.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/w2_con.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/w2_envirprf.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/w2_habitat.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/w2_selective.npt
+ create mode 100755 portland/V4/examples/Spokane River csv input format/wsc.csv
+ create mode 100755 portland/V4/examples/Spokane River/HangT01.npt
+ create mode 100755 portland/V4/examples/Spokane River/SPKwwtpQ01.npt
+ create mode 100755 portland/V4/examples/Spokane River/SPKwwtpT01.npt
+ create mode 100755 portland/V4/examples/Spokane River/Shade.npt
+ create mode 100755 portland/V4/examples/Spokane River/bth4.npt
+ create mode 100755 portland/V4/examples/Spokane River/cdt_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River/cdt_br9.npt
+ create mode 100755 portland/V4/examples/Spokane River/cin_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River/graph.npt
+ create mode 100755 portland/V4/examples/Spokane River/hangc01.npt
+ create mode 100755 portland/V4/examples/Spokane River/hangq01.npt
+ create mode 100755 portland/V4/examples/Spokane River/met01jr4.npt
+ create mode 100755 portland/V4/examples/Spokane River/qdt_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River/qdt_br9.npt
+ create mode 100755 portland/V4/examples/Spokane River/qin_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River/qtr_zero.npt
+ create mode 100755 portland/V4/examples/Spokane River/spkwwtpc01.npt
+ create mode 100755 portland/V4/examples/Spokane River/tdt_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River/tdt_br9.npt
+ create mode 100755 portland/V4/examples/Spokane River/tin_br8.npt
+ create mode 100755 portland/V4/examples/Spokane River/w2_aerate.npt
+ create mode 100755 portland/V4/examples/Spokane River/w2_con.npt
+ create mode 100755 portland/V4/examples/Spokane River/w2_envirprf.npt
+ create mode 100755 portland/V4/examples/Spokane River/w2_habitat.npt
+ create mode 100755 portland/V4/examples/Spokane River/w2_selective.npt
+ create mode 100755 portland/V4/examples/Spokane River/wsc.npt
+ create mode 100755 portland/V4/executables/w2 model/w2_v4_32.exe
+ create mode 100755 portland/V4/executables/w2 model/w2_v4_64.exe
+ create mode 100755 portland/V4/executables/w2 preprocessor/preW2-v4_32.exe
+ create mode 100755 portland/V4/executables/w2 preprocessor/preW2-v4_64.exe
+ create mode 100755 portland/V4/waterbalance/Waterbalance Utility.pdf
+ create mode 100755 portland/V4/waterbalance/waterbal_ivf.exe
+ create mode 100644 portland/www.ce.pdx W2 model.pdf
+ create mode 100644 portland/www.ce.pdx about.pdf
+ create mode 100644 portland/www.ce.pdx contacts.pdf
+ create mode 100644 portland/www.ce.pdx history.pdf
+ create mode 100644 portland/www.ce.pdx projects.pdf
+ create mode 100644 portland/www.ce.pdx.pdf
+ create mode 100644 tammy/alpha/makefile
+ create mode 100644 tammy/alpha/mod_constants.f08
+ create mode 100644 tammy/alpha/mod_file_handling.f08
+ create mode 100644 tammy/alpha/mod_mpif_sgi.f08
+ create mode 100644 tammy/alpha/mod_set_precision.f08
+ create mode 100755 tammy/alpha/water_quality
+ create mode 100644 tammy/alpha/water_quality.f08
+rditldmt@ITLDMT-MD-O2034:CE-QUAL-W2 $ git remote add origin https://github.com/floquet/CE-QUAL-W2.git
+rditldmt@ITLDMT-MD-O2034:CE-QUAL-W2 $ git remote -v
+origin	https://github.com/floquet/CE-QUAL-W2.git (fetch)
+origin	https://github.com/floquet/CE-QUAL-W2.git (push)
+rditldmt@ITLDMT-MD-O2034:CE-QUAL-W2 $ git push -u origin master
+Counting objects: 345, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (342/342), done.
+Writing objects: 100% (345/345), 81.68 MiB | 3.23 MiB/s, done.
+Total 345 (delta 66), reused 0 (delta 0)
+remote: Resolving deltas: 100% (66/66), done.
+To https://github.com/floquet/CE-QUAL-W2.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.

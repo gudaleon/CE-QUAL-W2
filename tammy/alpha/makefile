@@ -45,7 +45,7 @@ debug:
 
 clean:
 	rm -rf $(OBJS) $(PROGRAM) $(patsubst %.o,%.mod,$(MOD_OBJS))
-	rm -f *.mod *.smod *.o
+	rm -f *.mod *.smod *.o *.dSYM
 
 .PHONY: debug default clean
 
@@ -55,17 +55,21 @@ clean:
 $(PRG_OBJ) : $(MOD_OBJS)
 
 # Module interdepencies
-mod_allocator.o               :
+mod_allocator.o               : mod_set_precision.o mod_constants.o
 mod_control.o                 : mod_set_precision.o
 mod_constants.o               : mod_set_precision.o
 mod_file_handling.o           :
-mod_io_handles.o              : mod_file_handling.o
+mod_global_settings.o         :
+mod_gridc.o                   : mod_set_precision.o
+mod_io_handles.o              : mod_constants.o mod_global_settings.o mod_file_handling.o
+mod_master.o                  : mod_gridc.o mod_read_input.o
 mod_mpif_sgi.o                :
+mod_read_input.o              : mod_set_precision.o mod_allocator.o mod_constants.o mod_gridc.o
 mod_set_precision.o           :
 mod_time_stamp.o              :
 
 # rditldmt@ITLDMT-MD-O2034:alpha $ date
-# Wed Feb  8 14:39:02 CST 2017
+# Wed Feb  8 17:46:28 CST 2017
 
 # rditldmt@ITLDMT-MD-O2034:alpha $ pwd
 # /Users/rditldmt/Documents/GitHub_Desktop/CE-QUAL-W2/tammy/alpha
@@ -73,26 +77,10 @@ mod_time_stamp.o              :
 # rditldmt@ITLDMT-MD-O2034:alpha $ make debug
 # PROGRAM  = water_quality
 # PRG_OBJ  = water_quality.o
-# SRCS     = mod_constants.f08 mod_file_handling.f08 mod_mpif_sgi.f08 mod_set_precision.f08 mod_time_stamp.f08 water_quality.f08
-# OBJS     = mod_constants.o mod_file_handling.o mod_mpif_sgi.o mod_set_precision.o mod_time_stamp.o water_quality.o
-# MODS     = mod_constants.f08 mod_file_handling.f08 mod_mpif_sgi.f08 mod_set_precision.f08 mod_time_stamp.f08
-# MOD_OBJS = mod_constants.o mod_file_handling.o mod_mpif_sgi.o mod_set_precision.o mod_time_stamp.o
+# SRCS     = mod_allocator.f08 mod_constants.f08 mod_control.f08 mod_file_handling.f08 mod_global_settings.f08 mod_gridc.f08 mod_io_handles.f08 mod_master.f08 mod_mpif_sgi.f08 mod_read_input.f08 mod_set_precision.f08 mod_time_stamp.f08 water_quality.f08
+# OBJS     = mod_allocator.o mod_constants.o mod_control.o mod_file_handling.o mod_global_settings.o mod_gridc.o mod_io_handles.o mod_master.o mod_mpif_sgi.o mod_read_input.o mod_set_precision.o mod_time_stamp.o water_quality.o
+# MODS     = mod_allocator.f08 mod_constants.f08 mod_control.f08 mod_file_handling.f08 mod_global_settings.f08 mod_gridc.f08 mod_io_handles.f08 mod_master.f08 mod_mpif_sgi.f08 mod_read_input.f08 mod_set_precision.f08 mod_time_stamp.f08
+# MOD_OBJS = mod_allocator.o mod_constants.o mod_control.o mod_file_handling.o mod_global_settings.o mod_gridc.o mod_io_handles.o mod_master.o mod_mpif_sgi.o mod_read_input.o mod_set_precision.o mod_time_stamp.o
 
 # rditldmt@ITLDMT-MD-O2034:alpha $ echo $gflags
 # -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only
-
-# rditldmt@ITLDMT-MD-O2034:alpha $ gcc --version
-# Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-# Apple LLVM version 8.0.0 (clang-800.0.42.1)
-# Target: x86_64-apple-darwin15.6.0
-# Thread model: posix
-# InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-
-# rditldmt@ITLDMT-MD-O2034:alpha $ make
-# mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_set_precision.o mod_set_precision.f08
-# mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_constants.o mod_constants.f08
-# mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_file_handling.o mod_file_handling.f08
-# mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_mpif_sgi.o mod_mpif_sgi.f08
-# mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_time_stamp.o mod_time_stamp.f08
-# mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o water_quality.o water_quality.f08
-# mpif90 -g -o water_quality mod_constants.o mod_file_handling.o mod_mpif_sgi.o mod_set_precision.o mod_time_stamp.o water_quality.o
