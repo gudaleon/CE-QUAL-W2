@@ -3,19 +3,20 @@
 ! USACE ERDC Information Technology Laboratory
 ! Computational Analysis Branch
 ! Tomas.A.Mondragon@erdc.dren.mil
-!   delivered:     06 Feb 2016
-!   latest update: 01 Dec 2016
+!   delivered 06 Feb 2016
+!   updated   21 Jan 2017
 
 !  functions
-!   safeopen_readonly
-!   safeopen_readwrite
-!   safeopen_writenew
-!   safeopen_writeappend
-!   safeopen_writereplace
-!   safeopen_scratchfile
-!   close_and_keep_scratchfile
+!   safeopen_readonly(filename)
+!   safeopen_readwrite(filename
+!   safeopen_writenew(filename)
+!   safeopen_writeappend(filename)
+!   safeopen_writereplace(filename)
+!   safeopen_scratchfile()
+!   close_and_keep_scratchfile(fd)
 !  subroutines
-!   find_IU_info
+!   close_and_delete(fd)
+!   find_IU_info(fd)
 MODULE mFileHandling
 
     USE, INTRINSIC :: ISO_FORTRAN_ENV, ONLY : INPUT_UNIT, OUTPUT_UNIT, ERROR_UNIT
@@ -28,6 +29,8 @@ MODULE mFileHandling
 
 CONTAINS
 
+    ! Open a file in read only mode
+    ! USAGE: fd = safeopen_readonly(filename)
     FUNCTION safeopen_readonly(filename) RESULT(fd)
         IMPLICIT NONE
         INTEGER                                       :: fd
@@ -36,7 +39,7 @@ CONTAINS
         INTEGER                                       :: io_err
         LOGICAL                                       :: opened, exists
 
-            INQUIRE(FILE=filename, EXIST=exists, OPENED=opened)
+            INQUIRE(FILE=TRIM(filename), EXIST=exists, OPENED=opened)
             IF(.NOT. exists) THEN
                 WRITE(stderr,'(A,A,A)') "ERROR: Could not open ",TRIM(filename)," for reading; file doesn't exist."
                 STOP
@@ -45,13 +48,15 @@ CONTAINS
                 STOP
             END IF
 
-            OPEN(NEWUNIT=fd, FILE=filename, ACTION='READ', IOSTAT=io_err, IOMSG=io_message)
+            OPEN(NEWUNIT=fd, FILE=TRIM(filename), ACTION='READ', IOSTAT=io_err, IOMSG=io_message)
             IF(io_err .NE. 0) THEN
                 WRITE(stderr,'(A)') io_message
                 STOP
             END IF
     END FUNCTION safeopen_readonly
 
+    ! Open a file in readwrite mode
+    ! USAGE: fd = safeopen_readwrite(filename)
     FUNCTION safeopen_readwrite(filename) RESULT(fd)
         IMPLICIT NONE
         INTEGER                                       :: fd
@@ -60,21 +65,23 @@ CONTAINS
         INTEGER                                       :: io_err
         LOGICAL                                       :: opened, exists
 
-        INQUIRE(FILE=filename, EXIST=exists, OPENED=opened)
+        INQUIRE(FILE=TRIM(filename), EXIST=exists, OPENED=opened)
         IF(.NOT. exists) THEN
             WRITE(stderr,'(A,A,A)') "Warning: ",TRIM(filename)," doesn't exist; new empty file will be created."
         ELSE IF (opened) THEN
-            WRITE(stderr,'(A,A,A)') "ERROR: Refused to open ",filename,"; file already opened."
+            WRITE(stderr,'(A,A,A)') "ERROR: Refused to open ",TRIM(filename),"; file already opened."
             STOP
         END IF
 
-        OPEN(NEWUNIT=fd, FILE=filename, ACTION='READWRITE', IOSTAT=io_err, IOMSG=io_message)
+        OPEN(NEWUNIT=fd, FILE=TRIM(filename), ACTION='READWRITE', IOSTAT=io_err, IOMSG=io_message)
         IF(io_err .NE. 0) THEN
             WRITE(stderr,'(A)') io_message
             STOP
         END IF
     END FUNCTION safeopen_readwrite
 
+    ! Open a new file for writing
+    ! USAGE: fd = safeopen_writenew(filename)
     FUNCTION safeopen_writenew(filename) RESULT(fd)
         IMPLICIT NONE
         INTEGER                                       :: fd
@@ -83,7 +90,7 @@ CONTAINS
         INTEGER                                       :: io_err
         LOGICAL                                       :: opened, exists
 
-            INQUIRE(FILE=filename, EXIST=exists, OPENED=opened)
+            INQUIRE(FILE=TRIM(filename), EXIST=exists, OPENED=opened)
             IF(exists) THEN
                 WRITE(stderr,'(A,A,A)') "ERROR: ",TRIM(filename)," already exists; refused to open in case of overwrite."
                 STOP
@@ -93,13 +100,15 @@ CONTAINS
                 STOP
             END IF
 
-            OPEN(NEWUNIT=fd, FILE=filename, ACTION='WRITE', STATUS='NEW', IOSTAT=io_err, IOMSG=io_message)
+            OPEN(NEWUNIT=fd, FILE=TRIM(filename), ACTION='WRITE', STATUS='NEW', IOSTAT=io_err, IOMSG=io_message)
             IF(io_err .NE. 0) THEN
                 WRITE(stderr,'(A)') io_message
                 STOP
             END IF
     END FUNCTION safeopen_writenew
 
+    ! Open a file for writing, appending new content to the file's previous content
+    ! USAGE: fd = safeopen_writeappend(filename)
     FUNCTION safeopen_writeappend(filename) RESULT(fd)
         IMPLICIT NONE
         INTEGER                                       :: fd
@@ -108,7 +117,7 @@ CONTAINS
         INTEGER                                       :: io_err
         LOGICAL                                       :: opened, exists
 
-            INQUIRE(FILE=filename, EXIST=exists, OPENED=opened)
+            INQUIRE(FILE=TRIM(filename), EXIST=exists, OPENED=opened)
             IF(.NOT.exists) THEN
                 WRITE(stderr,'(A,A,A)') "Warning: ",TRIM(filename)," doesn't exist; new empty file will be created."
             ELSE IF (opened) THEN
@@ -118,13 +127,14 @@ CONTAINS
             END IF
 
             IF (exists) THEN
-                OPEN(NEWUNIT=fd, FILE=filename, STATUS="old", POSITION="append", ACTION="write", IOSTAT=io_err, IOMSG=io_message)
+                OPEN(NEWUNIT=fd, FILE=TRIM(filename), STATUS="old", POSITION="append", ACTION="write", IOSTAT=io_err, &
+                     IOMSG=io_message)
                 IF(io_err .NE. 0) THEN
                     WRITE(stderr,'(A)') io_message
                     STOP
                 END IF
             ELSE
-                OPEN(NEWUNIT=fd, FILE=filename, STATUS="new", ACTION="write", IOSTAT=io_err, IOMSG=io_message)
+                OPEN(NEWUNIT=fd, FILE=TRIM(filename), STATUS="new", ACTION="write", IOSTAT=io_err, IOMSG=io_message)
                 IF(io_err .NE. 0) THEN
                     WRITE(stderr,'(A)') io_message
                 STOP
@@ -132,6 +142,8 @@ CONTAINS
             END IF
     END FUNCTION safeopen_writeappend
 
+    ! Open a file for writing, overwriting its previous content
+    ! USAGE: fd = safeopen_writereplace(filename)
     FUNCTION safeopen_writereplace(filename) RESULT(fd)
         IMPLICIT NONE
         INTEGER                                       :: fd
@@ -140,7 +152,7 @@ CONTAINS
         INTEGER                                       :: io_err
         LOGICAL                                       :: opened, exists
 
-            INQUIRE(FILE=filename, EXIST=exists, OPENED=opened)
+            INQUIRE(FILE=TRIM(filename), EXIST=exists, OPENED=opened)
             IF(.NOT.exists) THEN
                 WRITE(stderr,'(A,A,A)') "Warning: ",TRIM(filename)," doesn't exist; new empty file will be created."
             ELSE IF (opened) THEN
@@ -149,13 +161,15 @@ CONTAINS
                 STOP
             END IF
 
-            OPEN(NEWUNIT=fd, FILE=filename, STATUS="REPLACE", ACTION="write", IOSTAT=io_err, IOMSG=io_message)
+            OPEN(NEWUNIT=fd, FILE=TRIM(filename), STATUS="REPLACE", ACTION="write", IOSTAT=io_err, IOMSG=io_message)
             IF(io_err .NE. 0) THEN
                 WRITE(stderr,'(A)') io_message
                 STOP
             END IF
     END FUNCTION safeopen_writereplace
 
+    ! Open a scratch file, which will be deleted upon closing by default
+    ! USAGE: fd = safeopen_scratchfile()
     FUNCTION safeopen_scratchfile() RESULT(fd)
         IMPLICIT NONE
         INTEGER                                       :: fd
@@ -169,6 +183,9 @@ CONTAINS
             END IF
     END FUNCTION safeopen_scratchfile
 
+    ! Special close for the special occasion when a file should be deleted after being closed
+    ! don't bother using for files opened with the status SCRATCH; fortran deletes those on close already
+    ! USAGE: CALL close_and_delete(fd)
     SUBROUTINE close_and_delete(fd)
         IMPLICIT NONE
         INTEGER,INTENT(IN)                            :: fd
@@ -183,6 +200,8 @@ CONTAINS
         CLOSE(UNIT=fd,STATUS='DELETE')
     END SUBROUTINE close_and_delete
 
+    ! Special close function for the rare occasion you want to keep a scratchfile
+    ! USAGE: newfilename = close_and_keep_scratchfile(fd)
     FUNCTION close_and_keep_scratchfile(fd) RESULT(filename)
         IMPLICIT NONE
         INTEGER, INTENT(IN)                           :: fd
@@ -206,6 +225,7 @@ CONTAINS
     END FUNCTION close_and_keep_scratchfile
 
     ! This is just an informative printer of information about a given IO file descriptor unit
+    ! USAGE: CALL find_IU_info(fd)
     SUBROUTINE find_IU_info(fd)
         IMPLICIT NONE
         INTEGER,INTENT(IN)                            :: fd
@@ -214,14 +234,14 @@ CONTAINS
 
             INQUIRE(UNIT=fd, OPENED=opened, EXIST=exists, NAMED=named, ACTION=omode, POSITION=pos)
             IF (opened) THEN
-                WRITE(stdout,'(A,i6,A,A,A,A,A)') "File descriptor unit ",fd," is opened " // &
-                                                 "in mode ",TRIM(omode), " at position ",trim ( pos ),"."
+                WRITE(stdout,'(A,i6,A,A,A,A,A)') "File descriptor unit ",fd," is opened &
+                                                 &in mode ",TRIM(omode), " at position ",TRIM(pos),"."
             ELSE
                 WRITE(stdout,'(A,i6,A)') "File descriptor unit ",fd," is not open."
             END IF
             IF (exists) THEN
-                WRITE(stdout,'(A,i6,A)') "File descriptor unit ",fd," is in the range of values " // &
-                                         "allowed by the compiler."
+                WRITE(stdout,'(A,i6,A)') "File descriptor unit ",fd," is in the range of values &
+                                           &allowed by the compiler."
             ELSE
                 WRITE(stdout,'(A,i6,A)') "File descriptor unit ",fd," not allowed by the compiler."
             END IF
