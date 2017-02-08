@@ -1,0 +1,177 @@
+$Additional CEMA related W2 input
+$Please see help file for input description
+$All lines at top of file starting with $ are comments and disregarded by the model
+"Global Switch for all sediment diagenesis features,", .TRUE.
+"H2S Constituent Number (Generic Constituent),", 3
+"CH4 Constituent Number (Generic Constituent),", 4
+"SO4 Constituent Number (Generic Constituent),", 5
+"Turbidity Constituent Number (Generic Constituent),", 7
+"Fe(II) Constituent Number (Generic Constituent),", 8
+"FeOOH Constituent Number (Generic Constituent),", 9
+"Mn(II) Constituent Number (Generic Constituent),", 10
+"MnO2 Constituent Number (Generic Constituent),", 11
+"Mature Fine Tailing (MFT) Constituent Number (ISS Constituent),", 13
+"Switch to perform bed consolidation,", .FALSE.
+"Fraction of layer thickness at which water layer is added,", 1.0
+"Number of bed consolidation regions,", 1
+"Starting segment for regions,",2
+"Ending segment for regions,", 269
+"Data type for bed consolidation for each region (0: Constant, 1: Time varying),", 1
+"Bed consolidation rate (m/d),", 0.02739726
+"Bed consolidation data file,", "Regn1.npt,"
+"Initial bed thickness in meters,", 2.0
+"Initial sediment bed porosity,", 0.8
+"Porewater pH,", 7.0
+"Include modeling of dynamic calculation of pH in sediments,", .FALSE.
+"Include modeling of alkalinity in sediments,", .FALSE.
+"Sediment bed particle size in microns,", 100
+"Sediment type 1: Cohesive, 2: Non-cohesive,", 2
+"Sediment bulk density (kg/m³),", 2600
+"Sediment particle settling velocity (m/d),", 5.0
+"Include sediment resuspension and deposition processes,", .FALSE.
+"Write bed elevation snapshot output,", .FALSE.
+"Write bed porosity snapshot output,", .FALSE.
+"Include FFT Layer,", .FALSE.
+"FFT Layer Number of Periods,", 5
+"FFT Layer Start Times,", 1,65,125,200,300
+"FFT Layer End Times,", 50,100,175,250,400
+"Initial tailings concentration in FFT (gm/m³),", 360000
+"Settling velocity of FFT to MFT (m/d),", 0.d0
+"Move FFT layer during consolidation,", .FALSE.
+"Include sediment diagenesis processes,", .TRUE.
+"Number of regions for different initial sediment concentrations,", 1
+"Starting segment for regions,", 2
+"Ending segment for regions,", 269
+"Initial temperature for each region C,", 25.0
+"Initial particulate organic carbon (total) concentration for each region mgC/l,", 951.0
+"Initial particulate organic nitrogen (total) concentration for each region mgN/l,", 152.16
+"Initial particulate organic phosphorus (total) concentration for each region mgP/l,",19.02
+"Initial sulfate concentration for each region mgS/l,", 1.0
+"Initial dissolved ammonia concentration for each region mgN/l,", 0.05
+"Initial total phosphate concentration for each region mgP/l,", 0.048
+"Initial dissolved sulfide concentration for each region mgS/l,", 0.0
+"Initial dissolved methane concentration for each region mgC/l,", 0.0
+"Initial total inorganic carbon concentration for each region mgC/l,", 5.13
+"Initial alkalinity concentration for each region mg/l as CaCO3,", 16.5
+"Initial Ferrous Iron concentration for each region mgFe/l,", 1.0
+"Initial Iron Oxyhydroxide concentration for each region mgFe/l,", 1.0
+"Initial Mn(II) concentration for each region mgMn/l,", 1.0
+"Initial manganese dioxide concentration for each region mgMn/l,", 1.0
+"Include generic sediment BOD constituents,", .FALSE.
+"Number of generic sediment BOD constituents,", 3
+"Generic sediment BOD constituent names,","SBOD1","SBOD2","SBOD3"
+"Number of regions for initializing generic sediment BOD constituents,", 1
+"Starting segment for generic BOD initialization for each region,", 2
+"Ending segment for generic BOD initialization for each region,", 4
+"Initial concentration for generic BOD per region mg/l,",0.0
+"Initial concentration for generic BOD per region mg/l,",0.0
+"Initial concentration for generic BOD per region mg/l,",0.0
+"Number of regions for different generic sediment BOD constituent consumption rate,", 1
+"Starting segment for generic BOD consumption for each region,", 2
+"Ending segment for generic BOD consumption for each region,", 4
+"Consumption rate for generic BOD per region 1/d,",0.0
+"Consumption rate for generic BOD per region 1/d,",0.0
+"Consumption rate for generic BOD per region 1/d,",0.0
+"Temperature coefficient for generic BOD decay per region,",1.01
+"Temperature coefficient for generic BOD decay per region,",1.02
+"Temperature coefficient for generic BOD decay per region,",1.03
+"Number of regions for different diagenesis related rates,", 1
+"Starting segment for regions,", 2
+"Ending segment for regions,", 269
+"Fraction of labile poc for each diagenesis region,",0.10
+"Fraction of refractory poc for each diagenesis region,",0.89
+"Fraction of labile pon for each diagenesis region,",0.10
+"Fraction of refractory pon for each diagenesis region,",0.89
+"Fraction of labile pop for each diagenesis region,",0.10
+"Fraction of refractory pop for each diagenesis region,",0.89
+"Pore water diffusion coefficient m²/d,",0.0005
+"DO Threshold for aerobic layer oxidation rates mgO2/l,",2.0
+"Nitrification rate in aerobic layer (NH3->NO3) at DO below threshold m/d,",0.02
+"Nitrification rate in aerobic layer (NH3->NO3) at DO above threshold m/d,",0.12
+"Denitrification rate in aerobic layer (NO3->N2) at DO below threshold m/d,",0.01
+"Denitrification rate in aerobic layer (NO3->N2) at DO above threshold m/d,",0.05
+"Denitrification rate in anerobic layer (NO3->N2) m/d,",0.25
+"Methane oxidation rate in aerobic layer m/d,",0.7
+"Nitrification half-saturation constant for NH4N in aerobic layer mgN/l,",0.728
+"Nitrification half-saturation constant for O2 in aerobic layer mgO2/l,",0.37
+"Temperature coefficient for pore water diffusion between layers,",1.08
+"Temperature coefficient for nitrification,",1.123
+"Temperature coefficient for denitrification,",1.08
+"Temperature coefficient for methane oxidation,",1.079
+"Sulfate concentration above which sulfide over methane is produced mgS/l,",20.0
+"Sulfide oxidation rate in aerobic layer m/d,",0.2
+"Temperature coefficient for sulfide oxidation,",1.08
+"Sulfide oxidation normalization constant for O2 mgO2/l,",4.0
+"Mineralization rate for labile PON 1/d,",0.0100
+"Mineralization rate for refractory PON 1/d,",0.00047
+"Mineralization rate for inert/slow refractory PON 1/d,",0.00001
+"Mineralization rate for labile POC 1/d,",0.0100
+"Mineralization rate for refractory POC 1/d,",0.00047
+"Mineralization rate for inert/slow refractory POC 1/d,",0.00001
+"Mineralization rate for labile POP 1/d,",0.0100
+"Mineralization rate for refractory POP 1/d,",0.00047
+"Mineralization rate for inert/slow refractory POP 1/d,",0.00001
+"Temperature coefficient for labile PON,",1.1
+"Temperature coefficient refractory PON,",1.15
+"Temperature coefficient inert/slow refractory PON,",1.17
+"Temperature coefficient labile POC,",1.1
+"Temperature coefficient refractory POC,",1.15
+"Temperature coefficient for inert/slow refractory POC,",1.17
+"Temperature coefficient labile POP,",1.1
+"Temperature coefficient refractory POP,",1.15
+"Temperature coefficient for inert/slow refractory POP,",1.17
+"Oxygen stoichiometry for H2S decay in water column,",1.88
+"Oxygen stoichiometry for CH4 decay in water column,",5.33
+"Phosphorus Sorption Coefficient in Aerobic Layer m^3/g",0.00005
+"Phosphorus Sorption Coefficient in Anaerobic Layer m^3/g",0.01
+"Methane production calculation method (0: Analytical, 1: Numerical),", 1
+"Equilibrium constant for NH4+ <-> NH3 ionization. Provide as pK,", 9.1
+"Equilibrium constant for HS- <-> H2S ionization. Provide as pK,", 9.0
+"Henry's constant for NH3d <-> NH3g in atm/M,", 0.0179
+"Henry's constant for CH4d <-> CH4g in atm/M,", 469
+"Henry's constant for H2Sd <-> H2Sg in atm/M,", 10
+"Henry's constant for CO2d <-> CO2g in atm/M,", 29
+"Gas diffusion coefficient in sediment in m²/s,", 1.0d-9
+"Calibration parameter R1 in m,", 0.0014
+"Young's modulus E in N/m²,", 1.4d+9
+"Critical stress intensity factor for sediments K1c in N/m^3/2,", 300
+"Bubbles release scale,", 0.02
+"Fraction of critical pressure at which cracks close,", 0.20
+"Switch to limit bubble size,", .TRUE.
+"Maximum bubble radius in mm,", 80
+"Switch to use slow release of bubbles,", .TRUE. 
+"Bubbles release fraction (sediments),", 0.005
+"Bubbles accumulation fraction,", 0.1
+"Number of bubbles release array,", 2000
+"Bubbles release fraction (atmosphere),", 0.001
+"Bubbles-Water gas exchange rate (1/s),",1.0d-7
+"Apply additional turbulence due to bubbles release,",.FALSE.
+"Turbulence scaling factor for bubbles release,",0.001
+"Coefficient Bturb in Aturb*ln(TSS) + Bturb = ln(Turbidity),",-0.294
+"Coefficient Aturb in Aturb*ln(TSS) + Bturb = ln(Turbidity),",1.243
+"Write sediment fluxes,", .TRUE.
+"Particle Mixing Velocity between Aerobic and Anaerobic Layers m/d", 0.05
+"Burial Velocity m/d", 0.001
+"Include modeling of Iron (FeOOH and Fe(II)) in sediments,", .FALSE.
+"Include modeling of Manganese (Mn(II) and MnO2) in sediments,", .FALSE.
+"Half-saturation constant for O2 for FeOOH reduction to Fe(II) g/m^3", 0.2
+"Reduction rate, FeOOH to Fe(II) d-1", 4.0
+"Oxidation rate, Fe(II) to FeOOH m^3/d-g", 1.0
+"FeOOH Settling Velocity m/d", 0.001
+"Fe(II) Sorption Coefficient in Aerobic Layer m^3/g",0.00005
+"Fe(II) Sorption Coefficient in Anaerobic Layer m^3/g",0.01
+"Oxygen stoichiometry for Fe(II) decay gO/gFe,",0.143
+"Half-saturation constant for O2 for MnO2 reduction to Mn(II) g/m^3", 0.2
+"Reduction rate, MnO2 to Mn(II) d-1", 0.002 
+"Oxidation rate, Mn(II) to MnO2 m^3/d-g", 0.0001
+"MnO2 Settling Velocity m/d", 0.001
+"Mn(II) Sorption Coefficient in Aerobic Layer m^3/g",0.00005
+"Mn(II) Sorption Coefficient in Anaerobic Layer m^3/g",0.01
+"Oxygen stoichiometry for Mn(II) decay gO/gMn,",0.291
+"Include particulate organic matter resuspension processes,", .FALSE.
+"Algorithm for resuspension of particulate organic matter (0: Wind Induced Resuspension, 1: Bottom Scour Resuspension),", 1
+"Critical shear stress for particulate organic matter resuspension dynes/cm^2",0.001
+"Critical Shields parameter for POM", 10.0
+"Use Cao method to estimate critical Shields parameter (rather than using input value)," .FALSE.
+"Specific gravity of particulate organic matter," 1.5
+"Particulate organic matter particle diameter m," 0.0001

@@ -1,0 +1,19 @@
+Enhanced pH Buffering Input File for CE-QUAL-W2
+
+PHALKC    PHBUFC  NCALKC
+             OFF     OFF
+
+BUFTYPE  NH4BUFC PO4BUFC  OMBUFC
+              ON      ON      ON
+			  
+OM TYPE   OMTYPE     NAG POMBUFC
+            DIST       2     OFF
+			
+DENSITY     SDEN    SDEN    SDEN    SDEN    SDEN    SDEN    SDEN    SDEN    SDEN
+            0.14    0.10
+			
+pK VALS       PK      PK      PK      PK      PK      PK      PK      PK      PK
+             4.5     9.6
+			 
+STD DEV     PKSD    PDSD    PDSD    PDSD    PDSD    PDSD    PDSD    PDSD    PDSD
+             1.2     1.0

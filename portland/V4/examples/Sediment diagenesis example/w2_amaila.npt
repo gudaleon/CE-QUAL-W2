@@ -1,0 +1,6 @@
+Additional "Sediment" compartments - SECI1 and SEDCI2 in units of g/m^3
+SEDIMENT1  SEDC1 SEDPRC1  SEDCI1   SEDK1
+WB 1          ON      ON    -2.0 0.01000
+
+SEDIMENT2  SEDC2 SEDPRC2  SEDCI2   SEDK2
+WB 1          ON      ON    -2.0 0.00047

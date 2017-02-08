@@ -1,0 +1,107 @@
+Hydrodynamic, constituent, and derived constituent names, formats, multipliers, and array viewer controls 
+                                                                                                         
+....................HNAME...................     FMTH   HMULT    HMIN    HMAX   HPLTC       #
+Timestep violations [NVIOL]                     (I10)     1.0    -1.0     1.0     OFF       1
+Horizontal velocity [U], m/s                  (f10.3)     1.0  -.1000    0.25     OFF       2
+Vertical velocity [W], m/s                    (f10.3)     1.0  -.1E-6   -0.01     OFF       3
+Temperature [T1], <o/>C                       (f10.3)     1.0    -2.0   -30.0      ON       4
+Density [RHO], kg/m^3                         (f10.3)     1.0   997.0  1005.0     OFF       5
+Vertical eddy viscosity [AZ], m^2/s           (f10.3)     1.0  -1E-08    0.01     OFF       6
+Velocity shear stress [SHEAR], 1/s^2          (f10.3)     1.0  -1E-08    0.01     OFF       7
+Internal shear [ST], m^3/s^2                  (f10.3)     1.0  -1E-08    0.01     OFF       8
+Bottom shear [SB], m^3/s^2                    (f10.3)     1.0  -1E-08    0.01     OFF       9
+Longitudinal momentum [ADMX], m^3/s^2         (f10.3)     1.0  -1E-08    0.01     OFF      10
+Longitudinal momentum [DM], m^3/s^2           (f10.3)     1.0  -1E-08    0.01     OFF      11
+Horizontal density gradient [HDG], m^3/s^2    (f10.3)     1.0  -1E-08    0.01     OFF      12
+Vertical momentum [ADMZ], m^3/s^2             (f10.3)     1.0  -1E-08    0.01     OFF      13
+Horizontal pressure gradient [HPG], m^3/s^2   (f10.3)     1.0  -1E-08    10.0     OFF      14
+Gravity term channel slope [GRAV], m^3/s^2    (f10.3)     1.0     0.0     0.0     OFF      15
+
+....................CNAME....................    FMTC   CMULT    CMIN    CMAX   CPLTC       #
+TDS, g/m^3                                    (F10.3)     1.0    -1.0   200.0     OFF       1
+Age, days                                     (F10.3)     1.0    -1.0  -200.0      ON       2
+Tracer, g/m^3                                 (F10.3)     1.0 -20.000   100.0     OFF       3
+Bacteria, col/100ml                           (F10.3)     1.0 -20.000   100.0     OFF       4
+Conductivity, mhos                            (F10.3)     1.0 -20.000   100.0     OFF       5
+Chloride, mg/l                                (F10.3)     1.0 -20.000   100.0     OFF       6
+ISS, g/m^3                                    (F10.3)     1.0 -20.000   100.0     OFF       7
+Phosphate, g/m^3                              (F10.3)     1.0    -1.0   500.0     OFF       8
+Ammonium, g/m^3                               (F10.3)     1.0 -0.1000   300.0     OFF       9
+Nitrate-Nitrite, g/m^3                        (F10.3)     1.0 -0.1000     5.0     OFF      10
+Dissolved silica, g/m^3                       (F10.3)     1.0    -1.0    10.0     OFF      11 
+Particulate silica, g/m^3                     (F10.3)     1.0 -0.2000    15.0     OFF      12
+Total iron, g/m^3                             (F10.3)     1.0 -0.1000     2.0     OFF      13
+Labile DOM, g/m^3                             (F10.3)     1.0 -0.1000    -3.0     OFF      14
+Refractory DOM, g/m^3                         (F10.3)     1.0 -0.1000    -4.0     OFF      15
+Labile POM, g/m^3                             (F10.3)     1.0 -0.1000    -3.0     OFF      16
+Refractory POM, g/m^3                         (F10.3)     1.0 -0.1000    -4.0     OFF      17
+1CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      18
+2CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      19
+3CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      20
+4CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      21
+5CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      22
+6CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      23
+7CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      24
+8CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      25
+9CBOD, g/m^3                                  (F10.3)     1.0 -0.0100     3.0     OFF      26
+10CBOD, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      27
+1CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      28
+2CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      29
+3CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      30
+4CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      31
+5CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      32
+6CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      33
+7CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      34
+8CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      35
+9CBODP, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      36
+10CBODP, g/m^3                                (F10.3)     1.0 -0.0100     3.0     OFF      37
+1CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      38
+2CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      39
+3CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      40
+4CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      41
+5CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      42
+6CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      43
+7CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      44
+8CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      45
+9CBODN, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      46
+10CBODN, g/m^3                                (F10.3)     1.0 -0.0100     3.0     OFF      47
+Algae1, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      48
+Algae2, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      49
+Algae3, g/m^3                                 (F10.3)     1.0 -0.0100     3.0     OFF      50
+Dissolved oxygen, g/m^3                       (F10.3)     1.0 -0.0100    -1.0     OFF      51
+Inorganic carbon, g/m^3                       (F10.3)     1.0 -0.0100     3.0     OFF      52
+Alkalinity, g/m^3                             (F10.3)     1.0 -0.0100     3.0     OFF      53
+zooplankton1, g/m^3                           (f10.3)     1.0 -0.0100     1.0     OFF      54
+LDOM P, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      55
+RDOM P, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      56
+LPOM P, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      57
+RPOM P, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      58
+LDOM N, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      59
+RDOM N, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      60
+LPOM N, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      61
+RPOM N, mg/m^3                                (g10.3)  1000.0     0.0     1.0     OFF      62                                                                                                                          
+                                                                                                         
+....................CDNAME...................   FMTCD  CDMULT   CDMIN   CDMAX  CDPLTC       #
+Dissolved organic carbon, g/m^3               (F10.3)     1.0    -1.0    25.0     OFF       1
+Particulate organic carbon, g/m^3             (F10.3)     1.0    -1.0    50.0     OFF       2
+Total organic carbon, g/m^3                   (F10.3)     1.0    -1.0    25.0     OFF       3
+Dissolved organic nitrogen, g/m^3             (F10.3)     1.0    -1.0    25.0     OFF       4
+Particulate organic nitrogen, g/m^3           (F10.3)     1.0    -1.0    25.0     OFF       5
+Total organic nitrogen, g/m^3                 (F10.3)     1.0    -1.0    50.0     OFF       6
+Total Kheldahl Nitrogen, g/m^3                (F10.3)     1.0    -1.0    15.0     OFF       7
+Total nitrogen, g/m^3                         (F10.3)     1.0    -1.0    15.0     OFF       8
+Dissolved organic phosphorus, g/m^3           (F10.3)     1.0    -1.0    25.0     OFF       9
+Particulate organic phosphorus, g/m^3         (F10.3)     1.0    -1.0    -1.0     OFF      10
+Total organic phosphorus, g/m^3               (F10.3)     1.0    -1.0     5.0     OFF      11
+Total phosphorus, g/m^3                       (F10.3)     1.0    -1.0    20.0     OFF      12
+Algal production, g/m^2/day                   (F10.3)     1.0    -1.0     5.0     OFF      13
+Chlorophyll a, mg/m^3                         (F10.3)     1.0    -5.0   145.0     OFF      14
+Total algae, g/m^3                            (F10.3)     1.0    -1.0    60.0     OFF      15
+Oxygen % Gas Saturation                       (F10.3)     1.0    -1.0    50.0     OFF      16
+Total suspended Solids, g/m^3                 (F10.3)     1.0    -1.0     5.0     OFF      17
+Total Inorganic Suspended Solids,g/m^3        (F10.3)     1.0    -1.0    20.0     OFF      18
+Carbonaceous Ultimate BOD, g/m^3              (F10.3)     1.0     5.0     9.0     OFF      19
+pH                                            (F10.3)     1.0    -1.0    10.0     OFF      20
+CO2                                           (F10.3)     1.0    -1.0    10.0     OFF      21
+HCO3                                          (F10.3)     1.0    -1.0    10.0     OFF      22
+CO3                                           (F10.3)     1.0     0.0     0.0     OFF      23

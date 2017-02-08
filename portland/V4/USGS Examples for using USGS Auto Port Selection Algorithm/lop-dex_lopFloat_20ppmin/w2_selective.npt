@@ -1,0 +1,58 @@
+Selective input control file 
+Temperature outlet control - frequency of output for temperature
+OUT FREQ TFRQTMP
+           0.125
+Structure outlet control based on time and temperature and branch
+DYNSTR1  CONTROL     NUM TCDFREQ
+             OFF       1   0.125
+
+DYNSTR2    ST/WD      JB   JS/NW  YEARLY    TSTR    TEND    TEMP   NELEV   ELEV1   ELEV2   ELEV3   ELEV4   ELEV5   ELEV6   ELEV7   ELEV8   ELEV9  ELEV10
+1             ST       1       1      ON     1.0   151.0    10.0       2    340.    330.
+ 
+MONITOR LOC ISEG    ELEV  DYNCEL
+1              0    -185     OFF
+
+AUTO ELEVCONTROL
+1            OFF
+
+SPLIT1      CNTR     NUM  TSFREQ  TSCONV
+              ON       2   0.125   0.005
+
+SPLIT2     ST/WD      JB  YEARLY    TSTR    TEND TTARGET  DYNSEL  ELCONT   NOUTS TSSHARE
+1             ST       1      ON      1.    366.     12.      ON     OFF       3     OFF
+2             ST       2      ON      1.    366.     12.      ON     OFF       2     OFF
+
+SPLITOUT JS1/NW1 JS2/NW2 JS3/NW3 JS4/NW4 JS5/NW5 JS6/NW6 JS7/NW7 JS8/NW8 JS9/NW9 JS0/NW0
+1              1       2       3
+2              1       2
+
+DEPTH     DEPTH1  DEPTH2  DEPTH3  DEPTH4  DEPTH5  DEPTH6  DEPTH7  DEPTH8  DEPTH9 DEPTH10
+1             1.      0.      0.
+2             0.      0.
+
+MINFRAC  MINFRC1 MINFRC2 MINFRC3 MINFRC4 MINFRC5 MINFRC6 MINFRC7 MINFRC8 MINFRC9 MNFRC10
+1            0.0     0.2     0.0
+2            0.0     0.0
+
+PRIORITY  PRIOR1  PRIOR2  PRIOR3  PRIOR4  PRIOR5  PRIOR6  PRIOR7  PRIOR8  PRIOR9 PRIOR10
+1              2       1       2
+2              2       1
+
+MINHEAD   MINHD1  MINHD2  MINHD3  MINHD4  MINHD5  MINHD6  MINHD7  MINHD8  MINHD9 MINHD10
+1              0       0       0
+2              0       0
+
+MAXHEAD   MAXHD1  MAXHD2  MAXHD3  MAXHD4  MAXHD5  MAXHD6  MAXHD7  MAXHD8  MAXHD9 MAXHD10
+1              0       0   51.42
+2              0       0
+
+MAXFLOW  MAXFLO1 MAXFLO2 MAXFLO3 MAXFLO4 MAXFLO5 MAXFLO6 MAXFLO7 MAXFLO8 MAXFLO9 MXFLO10
+1              0       0       0
+2              0       0
+
+THRESH1    TEMPN
+               2
+
+THRESH2 TEMPCRITTEMPCRIT
+1          11.11   11.11
+2          15.55   15.55
