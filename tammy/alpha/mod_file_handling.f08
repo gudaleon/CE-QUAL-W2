@@ -8,7 +8,7 @@
 
 !  functions
 !   safeopen_readonly(filename)
-!   safeopen_readwrite(filename
+!   safeopen_readwrite(filename)
 !   safeopen_writenew(filename)
 !   safeopen_writeappend(filename)
 !   safeopen_writereplace(filename)

@@ -59,6 +59,7 @@ mod_allocator.o               :
 mod_control.o                 : mod_set_precision.o
 mod_constants.o               : mod_set_precision.o
 mod_file_handling.o           :
+mod_io_handles.o              : mod_file_handling.o
 mod_mpif_sgi.o                :
 mod_set_precision.o           :
 mod_time_stamp.o              :
