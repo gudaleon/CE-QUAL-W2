@@ -32,7 +32,7 @@ contains
 
             ! Title cards
             write ( stdout, fmt_generic ) 'Control file'
-            call myGrid % allocate_title ( )
+            call myGrid % allocate_title ( myGrid )
             !call allocate_rank_1_char_sub ( myGrid % TITLE, 11_ip )
 
             write ( stdout, fmt_generic ) '  title cards'
