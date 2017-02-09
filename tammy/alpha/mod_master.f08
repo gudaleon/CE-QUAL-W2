@@ -43,7 +43,7 @@ contains
     subroutine develop ( )
 
         call myIO % open_files ( 'w2_con.npt', 'pre.err', 'pre.wrn', 'pre.opt', '../test/' )
-        call read_con_sub ( myGrid )
+        call read_con_sub ( myGrid, myIO % open_files )
 
     end subroutine develop
 

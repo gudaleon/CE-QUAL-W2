@@ -14,7 +14,9 @@ module mConstants
     real ( rp ), parameter :: pi = acos ( - 1.0_rp )
 
     ! formats
-    character ( len = * ), parameter :: fmt_generic = '( * ( g0 ) )'
+    character ( len = * ), parameter :: fmt_generic  = '( * ( g0 ) )'
+    character ( len = * ), parameter :: fmt_err_read = '( "I/O failure during ", g0, /, "iostatus = ", g0,' // &
+                                                       ' /, "iomsg = ", g0, ".", / )'
 
     ! messages
     character ( len = * ), parameter :: error_fatal = 'Halting on fatal error . . .'

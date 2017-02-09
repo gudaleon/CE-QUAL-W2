@@ -6,25 +6,45 @@
 
 module mReadInput
 
-    use mAllocator,                     only : allocate_rank_1_char_sub
-    use mConstants,                     only : stdout, fmt_generic
+    !use mAllocator,                     only : allocate_rank_1_char_sub
+    use mConstants,                     only : stdout, fmt_generic, fmt_err_read, error_fatal
+    use mFileHandling,                  only : find_IU_info
     use mIOHandles,                     only : io_handles
     use mGridC,                         only : gridc
     use mSetPrecision,                  only : ip
 
     implicit none
 
+    character ( len =   8 ) :: AID
+
+    integer                 :: io_status
+    character ( len = 256 ) :: io_msg
+
 contains
 
-    subroutine read_con_sub ( myGrid )
+    subroutine read_con_sub ( myGrid, myIO )
 
-        type ( gridc ), intent ( inout ) :: myGrid
+        ! slot variables
+        type ( gridc ),      intent ( inout ) :: myGrid
+        type ( io_handles ), intent ( in )    :: myIO
+        ! local variables
+        integer :: j
 
-        ! Title cards
-        write ( stdout, fmt_generic ) 'Control file'
-        call allocate_rank_1_char_sub ( myGrid % TITLE, 11_ip )
-        ! write ( stdout, fmt_generic ) '  title cards'
-        ! read (CON,'(//A8/(8X,A72))',ERR=400) AID, (TITLE(J),J=1,10)
+            ! Title cards
+            write ( stdout, fmt_generic ) 'Control file'
+            call myGrid % allocate_title ( )
+            !call allocate_rank_1_char_sub ( myGrid % TITLE, 11_ip )
+
+            write ( stdout, fmt_generic ) '  title cards'
+            read  ( myIO % con ,'( // A8 / ( 8X, A72 ) )', iostat = io_status, iomsg = io_msg ) AID, &
+                                                                                    ( myGrid % TITLE ( j ), j = 1, 10 )
+            if ( io_status /= 0 ) then
+                write ( stdout, fmt_err_read ) 'READ', io_status, trim ( io_msg )
+                call find_IU_info ( myIO % con )
+                stop error_fatal
+            end if
+
+            write ( stdout, fmt_generic )'fmt_err_read = ', fmt_err_read
         ! IF (AID /= 'TITLE C ')               GO TO 400
         !
         ! ! Array dimensions

@@ -64,7 +64,7 @@ mod_gridc.o                   : mod_set_precision.o
 mod_io_handles.o              : mod_constants.o mod_global_settings.o mod_file_handling.o
 mod_master.o                  : mod_gridc.o mod_read_input.o
 mod_mpif_sgi.o                :
-mod_read_input.o              : mod_set_precision.o mod_allocator.o mod_constants.o mod_gridc.o
+mod_read_input.o              : mod_set_precision.o mod_constants.o mod_file_handling.o 	mod_gridc.o
 mod_set_precision.o           :
 mod_time_stamp.o              :
 

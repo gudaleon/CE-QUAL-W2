@@ -1,10 +1,13 @@
 ! 3456789 123456789 223456789 323456789 423456789 523456789 623456789 723456789 823456789 923456789 023456789 123456789 223456789 32
 module mAllocator
+    ! allocate and immediately populate: force memory errors immediately
+    ! deallocate if needed; deallocation triggers warning message to std_out
 
     use mConstants,                     only : stdout, fmt_generic, error_fatal
     use mSetPrecision,                  only : ip
 
     implicit none
+
     integer                 :: alloc_status  = -1
     character ( len = 512 ) :: alloc_message = 'null'
 
