@@ -30,21 +30,23 @@ contains
         ! local variables
         integer :: j
 
-            ! Title cards  line 600
-            write ( stdout, fmt_generic ) 'Control file'
-            call myGrid % allocate_title ( myGrid )
-            !call allocate_rank_1_char_sub ( myGrid % TITLE, 11_ip )
+            call myGrid % allocate_title ( myGrid ) ! line 17
 
-            write ( stdout, fmt_generic ) '  title cards'
-            read  ( myIO % con ,'( // A8 / ( 8X, A72 ) )', iostat = io_status, iomsg = io_msg ) AID, &
+            ! Title cards
+            read  ( myIO % con ,'( /// ( 8X, A72 ) )', iostat = io_status, iomsg = io_msg ) AID, &
                                                                                     ( myGrid % TITLE ( j ), j = 1, 10 )
-            if ( io_status /= 0 ) then
+            if ( io_status /= 0 ) then ! verify the first time we read from the control file
                 write ( stdout, fmt_err_read ) 'READ', io_status, trim ( io_msg )
                 call find_IU_info ( myIO % con )
                 stop error_fatal
             end if
 
-            write ( stdout, fmt_generic )'fmt_err_read = ', fmt_err_read
+            ! ! array dimensions
+            ! read  ( myIO % con ,'( // 8X, 5I8, 2A8 )' ) NWB, NBR, IMX, KMX, NPROC, CLOSEC                     ! SW 7/31/09
+            ! read  ( myIO % con ,'( // 8X, 8I8      )' ) NTR, NST, NIW, NWD, NGT, NSP, NPI, NPU
+            ! read  ( myIO % con ,'( // 8X, 7I8,  A8 )' ) NGC, NSS, NAL, NEP, NBOD, nmc, nzp
+            ! read  ( myIO % con ,'( // 8X,  I8, 5A8 )' ) NOD, SELECTC, HABTATC, ENVIRPC, AERATEC, inituwl
+
         ! IF (AID /= 'TITLE C ')               GO TO 400
         !
         ! ! Array dimensions
