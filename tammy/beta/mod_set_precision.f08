@@ -6,6 +6,7 @@ module mSetPrecision
 
     ! Define working precision: Hansen and Tompkins, p. 22
     integer, parameter :: rp = REAL64
+    integer, parameter :: sp = REAL32
     integer, parameter :: ip = INT64
 
 end module mSetPrecision

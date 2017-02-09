@@ -13,6 +13,9 @@ module mConstants
 
     real ( rp ), parameter :: pi = acos ( - 1.0_rp )
 
+    ! gravitational acceleration
+    real ( rp ), parameter :: G = 9.80665_rp ! http://physics.nist.gov/cgi-bin/cuu/Value?gn
+
     ! formats
     character ( len = * ), parameter :: fmt_generic  = '( * ( g0 ) )'
     character ( len = * ), parameter :: fmt_err_read = '( "I/O failure during ", g0, /, "iostatus = ", g0,' // &
