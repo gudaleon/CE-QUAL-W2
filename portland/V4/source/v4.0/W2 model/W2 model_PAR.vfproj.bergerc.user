@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioUserFile ProjectCreator="Intel Fortran" Keyword="Win32 Application" Version="11.0" ProjectIdGuid="{67BCEB4E-1875-44B5-B6DE-06E83F427036}">
+	<Configurations>
+		<Configuration Name="Debug|Win32" WorkingDirectory="C:\Users\bergerc\Work\Tabajara\scenarios\Low_Flow_40p_harvested"/>
+		<Configuration Name="Release|Win32" WorkingDirectory="C:\Users\bergerc\Work\Tabajara\scenarios\Low_Flow_40p_harvested"/>
+		<Configuration Name="Debug|x64" WorkingDirectory="C:\Users\bergerc\Work\CEMA\CEMA_code_and_example_11_24_14\test_mode_2"/>
+		<Configuration Name="Release|x64" WorkingDirectory="C:\Users\bergerc\Work\CEMA\CEMA_code_and_example_11_24_14\wahiawa"/></Configurations></VisualStudioUserFile>

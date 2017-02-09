@@ -30,7 +30,7 @@ contains
         ! local variables
         integer :: j
 
-            ! Title cards
+            ! Title cards  line 600
             write ( stdout, fmt_generic ) 'Control file'
             call myGrid % allocate_title ( myGrid )
             !call allocate_rank_1_char_sub ( myGrid % TITLE, 11_ip )
