@@ -40,7 +40,7 @@
 !**                                                                                                                               **
 !***********************************************************************************************************************************
 
-program water_quality  ! development shell for OOD version of CE-QUAL-W2
+program water_quality  ! development shell for OOD version of CE-QUAL-W2 V4
 
     use, intrinsic :: iso_fortran_env,  only : compiler_version, compiler_options, stdout => output_unit
 
@@ -59,7 +59,7 @@ program water_quality  ! development shell for OOD version of CE-QUAL-W2
         call cpu_time ( cpu_time_start )
 
             write ( *, "( /, 'Running CE-QUAL-W2 OOD...' )" )
-            call develop ( )
+            ! call develop ( )
 
         call cpu_time ( cpu_time_stop  )
         cpu_time_elapsed = cpu_time_stop - cpu_time_start
@@ -76,41 +76,48 @@ program water_quality  ! development shell for OOD version of CE-QUAL-W2
 
 end program water_quality
 
-! rditldmt@ITLDMT-MD-O2034:alpha $ date
-! Thu Feb  9 14:39:37 CST 2017
-! rditldmt@ITLDMT-MD-O2034:alpha $ pwd
-! /Users/rditldmt/Documents/GitHub_Desktop/CE-QUAL-W2/tammy/alpha
-! rditldmt@ITLDMT-MD-O2034:alpha $ gfortran --version
+! Thu Feb  9 14:52:03 CST 2017
+
+! rditldmt@ITLDMT-MD-O2034:beta $ date
+! Thu Feb  9 14:52:03 CST 2017
+
+! rditldmt@ITLDMT-MD-O2034:beta $ pwd
+! /Users/rditldmt/Documents/GitHub_Desktop/CE-QUAL-W2/tammy/beta
+
+! rditldmt@ITLDMT-MD-O2034:beta $ gfortran --version
 ! GNU Fortran (MacPorts gcc7 7-20170122_0) 7.0.1 20170122 (experimental)
 ! Copyright (C) 2017 Free Software Foundation, Inc.
 ! This is free software; see the source for copying conditions.  There is NO
 ! warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-! rditldmt@ITLDMT-MD-O2034:alpha $ make
+! rditldmt@ITLDMT-MD-O2034:beta $ echo $gflags
+! -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only
+
+! rditldmt@ITLDMT-MD-O2034:beta $ make debug
+! PROGRAM  = water_quality
+! PRG_OBJ  = water_quality.o
+! SRCS     = mod_constants.f08 mod_control.f08 mod_mpif_sgi.f08 mod_set_precision.f08 mod_time_stamp.f08 water_quality.f08
+! OBJS     = mod_constants.o mod_control.o mod_mpif_sgi.o mod_set_precision.o mod_time_stamp.o water_quality.o
+! MODS     = mod_constants.f08 mod_control.f08 mod_mpif_sgi.f08 mod_set_precision.f08 mod_time_stamp.f08
+! MOD_OBJS = mod_constants.o mod_control.o mod_mpif_sgi.o mod_set_precision.o mod_time_stamp.o
+
+! rditldmt@ITLDMT-MD-O2034:beta $ make
 ! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_set_precision.o mod_set_precision.f08
 ! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_constants.o mod_constants.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_allocator.o mod_allocator.f08
 ! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_control.o mod_control.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_file_handling.o mod_file_handling.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_global_settings.o mod_global_settings.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_gridc.o mod_gridc.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_io_handles.o mod_io_handles.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_read_input.o mod_read_input.f08
-! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_master.o mod_master.f08
 ! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_mpif_sgi.o mod_mpif_sgi.f08
 ! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o mod_time_stamp.o mod_time_stamp.f08
 ! mpif90 -c -g -ffpe-trap=denormal,invalid,zero -fbacktrace -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Og -pedantic -fcheck=bounds -fmax-errors=5 -Wuse-without-only -o water_quality.o water_quality.f08
-! mpif90 -g -o water_quality mod_allocator.o mod_constants.o mod_control.o mod_file_handling.o mod_global_settings.o mod_gridc.o mod_io_handles.o mod_master.o mod_mpif_sgi.o mod_read_input.o mod_set_precision.o mod_time_stamp.o water_quality.o
-! rditldmt@ITLDMT-MD-O2034:alpha $ ./water_quality
+! mpif90 -g -o water_quality mod_constants.o mod_control.o mod_mpif_sgi.o mod_set_precision.o mod_time_stamp.o water_quality.o
 
-! Running CE-QUAL-W2 ...
-! attempting to open ../test/w2_con.npt, ../test/pre.err, ../test/pre.wrn, ../test/pre.opt.
-! files opened successfully
-
-! cpu seconds: 0.63800000000000055E-003
-! timestamp: 2017-02-09  14:40:03  UCT-0600
-
+! rditldmt@ITLDMT-MD-O2034:beta $ ./water_quality
+!
+! Running CE-QUAL-W2 OOD...
+!
+! cpu seconds: 0.10999999999999985E-003
+! timestamp: 2017-02-09  14:52:30  UCT-0600
+!
 ! Fortran compiler version:    GCC version 6.3.0
 ! Fortran compilation options: -I /opt/local/include/mpich-mp -I /opt/local/include/mpich-mp -fPIC -feliminate-unused-debug-symbols -mmacosx-version-min=10.11.6 -mtune=core2 -auxbase-strip water_quality.o -g -Og -Wall -Waliasing -Wconversion-extra -Wextra -Wsurprising -Wimplicit-procedure -Wintrinsics-std -Wpedantic -Wuse-without-only -ffpe-trap=denormal,invalid,zero -fbacktrace -fcheck=bounds -fmax-errors=5
-
+!
 ! STOP execution completed for program water_quality
