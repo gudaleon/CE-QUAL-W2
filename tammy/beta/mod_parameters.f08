@@ -7,10 +7,13 @@ module mParameters
 
     real ( sp ), parameter :: W2VER = 4.0_sp
 
+    ! gravitational acceleration
+    real ( rp ), parameter :: G = 9.80665_rp ! http://physics.nist.gov/cgi-bin/cuu/Value?gn
+
     ! precision controlled numbers
     ! module global
     real ( rp ), parameter :: DAY = real ( 60 * 60 * 24, rp ) ! seconds in a day
-    real ( rp ), parameter :: NONZERO = 1.0E-20_rp,    REFL  = 0.94_rp,   FRAZDZ = 0.14_rp, DZMIN = 1.4E-7_rp, &
-                              AZMIN = DZMIN * 10.0_rp, DZMAX = 1000.0_rp, RHOW   = 1000.0_rp
+    real ( rp ), parameter :: NONZERO = 1.0E-20_rp, REFL  = 0.94_rp, FRAZDZ = 0.14_rp, DZMAX = 1000.0_rp, RHOW = 1000.0_rp, &
+                              DZMIN = 1.4E-7_rp, AZMIN = DZMIN * 10.0_rp
 
 end module mParameters
