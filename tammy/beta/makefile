@@ -59,7 +59,7 @@ $(PRG_OBJ) : $(MOD_OBJS)
 mod_control.o                 : mod_set_precision.o
 mod_constants.o               : mod_set_precision.o
 mod_file_handling.o           :
-mod_globals.o                 : mod_set_precision.o
+mod_globals.o                 : mod_set_precision.o mod_constants.o
 #mod_gridc.o                   : mod_set_precision.o
 #mod_io_handles.o              : mod_constants.o mod_global_settings.o mod_file_handling.o
 #mod_master.o                  : mod_gridc.o mod_read_input.o
