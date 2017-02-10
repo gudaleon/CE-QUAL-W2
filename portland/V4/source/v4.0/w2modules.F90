@@ -128,7 +128,7 @@ MODULE GLOBAL
   REAL(R8),     SAVE, ALLOCATABLE, DIMENSION(:,:)    :: RATZ,   CURZ1,  CURZ2,  CURZ3    ! SW 5/15/06
   REAL(R8)                                           :: G,PI
   REAL(R8)                                           :: DENSITY
-  DATA                                        NDC /23/, NHY /15/, NFL /139/      ! CEMA and Amaila -altered 'NFL' 
+  DATA                                        NDC /23/, NHY /15/, NFL /139/      ! CEMA and Amaila -altered 'NFL'
   DATA                                        G /9.81D0/, PI/3.14159265359D0/
   DATA                                        WRN /32/, W2ERR /33/
   EXTERNAL DENSITY
@@ -168,7 +168,7 @@ MODULE STRUCTURES
   REAL,              ALLOCATABLE, DIMENSION(:)       :: EKTWR,  EKBWR     ! SW 3/18/16
   LOGICAL,           ALLOCATABLE, DIMENSION(:)       :: LATERAL_SPILLWAY, LATERAL_PIPE, LATERAL_GATE, LATERAL_PUMP, BEGIN, WLFLAG
   CHARACTER(8),      ALLOCATABLE, DIMENSION(:)       :: LATGTC, LATSPC, LATPIC, LATPUC, DYNGTC, DYNPIPE, DYNPUMP                         ! SW 5/10/10
-  CHARACTER(8)                                       :: GT2CHAR 
+  CHARACTER(8)                                       :: GT2CHAR
   REAL(R8),      ALLOCATABLE, DIMENSION(:)           :: EPU,    STRTPU, ENDPU,  EONPU,  EOFFPU, QPU
   INTEGER,       ALLOCATABLE, DIMENSION(:)           :: IUPU,   IDPU,   KTPU,   KBPU,   JWUPU,  JWDPU,  JBUPU,  JBDPU
   REAL(R8)                                           :: THR, OMEGA, EPS2
@@ -211,7 +211,7 @@ MODULE TVDC
 END MODULE TVDC
 MODULE KINETIC
   USE PREC
-  REAL                                               :: KDO                        
+  REAL                                               :: KDO
   REAL(R8),    POINTER,           DIMENSION(:,:)     :: TDS,    COL,    NH4,    NO3,    PO4,    FE,     DSI,    PSI,    LDOM
   REAL(R8),    POINTER,           DIMENSION(:,:)     :: RDOM,   LPOM,   RPOM,   O2,     TIC,    ALK
   REAL(R8),    POINTER,           DIMENSION(:,:)     :: COLSS,  NH4SS,  NO3SS,  PO4SS,  FESS,   DSISS,  PSISS,  LDOMSS
@@ -378,7 +378,7 @@ MODULE TDGAS
 END MODULE TDGAS
 MODULE LOGICC
   LOGICAL                                        :: SUSP_SOLIDS,        OXYGEN_DEMAND,    UPDATE_GRAPH,     INITIALIZE_GRAPH
-  LOGICAL                                        :: WITHDRAWALS,        TRIBUTARIES,      GATES, PIPES  
+  LOGICAL                                        :: WITHDRAWALS,        TRIBUTARIES,      GATES, PIPES
   LOGICAL,           ALLOCATABLE, DIMENSION(:)   :: NO_WIND,            NO_INFLOW,        NO_OUTFLOW,       NO_HEAT
   LOGICAL,           ALLOCATABLE, DIMENSION(:)   :: UPWIND,             ULTIMATE,         FRESH_WATER,      SALT_WATER
   LOGICAL,           ALLOCATABLE, DIMENSION(:)   :: LIMITING_DLT,       TERM_BY_TERM,     MANNINGS_N,       PH_CALC
@@ -512,7 +512,7 @@ USE PREC
   REAL(R8)      :: DEPKTI,COLB,COLDEP,SSTOT,RHOIN,VQIN,VQINI
   REAL(R8)      :: QINFR, ELT,RHOIRL1,V1,BHSUM,BHRSUM,WT1,WT2
   REAL(R8)      :: ICETHU, ICETH1, ICETH2, ICE_TOL,DEL,HICE            ! SW 4/19/10
-  REAL(R8)      :: DLTCAL,HEATEX,SROOUT,SROSED,SROIN,SRONET,TFLUX,HIA  
+  REAL(R8)      :: DLTCAL,HEATEX,SROOUT,SROSED,SROIN,SRONET,TFLUX,HIA
   REAL(R8)      :: TAIRV,EA,ES,DTV
   REAL(R8)      :: T2R4
   INTEGER       :: CON,    RSI,    GRF,  NDG=16,  FLOWBFN, WLFN, AERATEFN, FISHHABFN, MASSBFN
@@ -529,7 +529,7 @@ USE PREC
   CHARACTER(2)  :: DEG
   CHARACTER(3)  :: GDCH
   CHARACTER(8)  :: RSOC,   RSIC,   CCC,   LIMC,   WDOC,   TSRC,   EXT, SELECTC, CLOSEC, HABTATC,ENVIRPC, AERATEC, INITUWL, DLTINTER      ! SW 7/31/09; 8/24/09
-  CHARACTER(10) :: BLANK,  BLANK1, SEDCH,   SEDPCH,   SEDNCH,   SEDCCH 
+  CHARACTER(10) :: BLANK,  BLANK1, SEDCH,   SEDPCH,   SEDNCH,   SEDCCH
   CHARACTER(72) :: WDOFN,  RSOFN,  TSRFN, SEGNUM, LINE, SEGNUM2, TSRFN1
   LOGICAL       :: RETLOG, SEDCOMP_EXIST, PHBUFF_EXIST ! SW 5/26/15
 
@@ -544,7 +544,7 @@ USE PREC
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: ICETHI, ALBEDO, HWI,    BETAI,  GAMMAI, ICEMIN, ICET2,  CBHE,   TSED
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: FI,     SEDCI,  FSOD,   FSED,   AX,     RANLW,    T2I,    ELBOT,  DXI
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: SEDCI1,SEDCI2   ! Amaila
-  REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: WSHX     ! QINT,   QOUTT,  
+  REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: WSHX     ! QINT,   QOUTT,
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: SROSH,  EV, RS, RN
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: QDT,    QPR,    ICESW
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: XBR,    QPRBR,  EVBR,   TPB
@@ -567,7 +567,7 @@ USE PREC
   REAL,          ALLOCATABLE, DIMENSION(:,:)   :: SEDVP1,  SEDVP2    ! Amaila
   REAL(R8),      ALLOCATABLE, DIMENSION(:,:)   :: TSSUH1, TSSDH1
   REAL(R8),      ALLOCATABLE, DIMENSION(:,:,:) :: CSSUH1, CSSDH1
-  REAL,          ALLOCATABLE, DIMENSION(:,:,:) :: EPIVP,  CVP, macrcvp, macrclp   ! cb 8/21/15  
+  REAL,          ALLOCATABLE, DIMENSION(:,:,:) :: EPIVP,  CVP, macrcvp, macrclp   ! cb 8/21/15
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: VOLB
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: DLVOL,  VOLG
   REAL(R8),      ALLOCATABLE, DIMENSION(:)     :: A,      C,      D,      F,      V,      BTA,    GMA,    BHRHO
@@ -641,17 +641,17 @@ USE PREC
   DATA ICE_TOL /0.0050D0/  !0.005
   DATA BLANK /'          '/, BLANK1 /'    -99.00'/
   DATA CON   /10/                      !,  RSI /11/
-  DATA THRKTI /0.10D0/  
+  DATA THRKTI /0.10D0/
   DATA FLOWBFN /9500/, WLFN /9510/, AERATEFN /9520/, FISHHABFN /9530/, MASSBFN /9501/        ! SW 5/25/15 NOTE THAT FISHHABFN INCREMENTS 3 TIMES SO 9531,9532,9533 ARE RESERVED ALSO JWFILE1=9549+NWB  JBFILE1=9749+NBR
 
 END MODULE MAIN
-MODULE BIOENERGETICS            
+MODULE BIOENERGETICS
   INTEGER,           ALLOCATABLE, DIMENSION(:)       :: IBIO,BIODP,BIOEXPFN,WEIGHTNUM
   REAL,              ALLOCATABLE, DIMENSION(:)       :: BIOD, BIOF,VOLROOS
   REAL,              ALLOCATABLE, DIMENSION(:,:)     :: C2W
   REAL,              ALLOCATABLE, DIMENSION(:,:,:)   :: C2ZOO
-  CHARACTER*8 BIOC      
-  LOGICAL BIOEXP,FISHBIO   
+  CHARACTER*8 BIOC
+  LOGICAL BIOEXP,FISHBIO
   INTEGER NBIO,NIBIO,KLIM,FISHBIOFN
   REAL*8 NXBIO,NXTBIO,GAMMAB
   CHARACTER*72 BIOFN,WEIGHTFN
@@ -661,7 +661,7 @@ END MODULE BIOENERGETICS
 
 
 Module CEMAVars
-    
+
     Integer(4), Allocatable, Dimension(:) :: ConsolidationType, ConstPoreWtrRate, NumCEMAPWInst
     Integer(4), Allocatable, Dimension(:) :: ConsRegSegSt, ConsRegSegEn, ConsolidRegnNum
     Character(256), Allocatable, Dimension(:) :: ConsolidRateRegnFil
@@ -674,7 +674,7 @@ Module CEMAVars
     Logical, Allocatable, Dimension(:) :: CEMALayerAdded, CEMASSApplied
     Logical, Allocatable, Dimension(:) :: EndBedConsolidation
     Logical, Allocatable, Dimension(:) :: ApplyCEMAPWRelease
-    
+
     Real(8), Allocatable, Dimension(:) :: SDRegnPOC_T, SDRegnPON_T, SDRegnPOP_T, SDRegnSul_T
     Real(8), Allocatable, Dimension(:) :: SDRegnPOC_L_Fr, SDRegnPOC_R_Fr, SDRegnPON_L_Fr
     Real(8), Allocatable, Dimension(:) :: SDRegnPON_R_Fr, SDRegnPW_DiffCoeff, SDRegnOx_Threshold
@@ -704,18 +704,18 @@ Module CEMAVars
     Real(8), Allocatable, Dimension(:) :: SD_SO4Conc, SD_pHValue
     Real(8), Allocatable, Dimension(:) :: SD_EPOC, SD_EPON, SD_EPOP
     Real(8), Allocatable, Dimension(:) :: SD_AerLayerThick
-        
+
     Real(8), Allocatable, Dimension(:,:) :: MFTSedFlxVars, CEMA_SD_Vars
     Real(8), Allocatable, Dimension(:,:) :: CEMATSSCopy
-    
+
     Integer(4), Allocatable, Dimension(:) :: CEMAMFT_RandC_RegN, CEMAMFT_InCond_RegN
     Integer(4), Allocatable, Dimension(:) :: SedBedInitRegSegSt, SedBedInitRegSegEn
     Integer(4), Allocatable, Dimension(:) :: SedBedDiaRCRegSegSt, SedBedDiaRCRegSegEn
-    
+
     Integer(4), Allocatable, Dimension(:) :: FFTActPrdSt, FFTActPrdEn
     Integer, Allocatable, Dimension(:) :: SDRegn_CH4CompMethod, SDRegn_POMResuspMethod
     Real(8), Allocatable, Dimension(:) :: FFTLayConc
-    
+
     Real(8), Allocatable, Dimension(:) :: H2SDis, H2SGas, CH4Dis, CH4Gas, NH4Dis, NH4Gas, CO2Dis, CO2Gas
     Real(8), Allocatable, Dimension(:) :: BubbleRadiusSed, PresBubbSed, PresCritSed
     Real(8), Allocatable, Dimension(:) :: CgSed, C0Sed, CtSed
@@ -725,13 +725,13 @@ Module CEMAVars
     Integer(4), Allocatable, Dimension(:,:) :: BubblesLNumber, BubblesStatus
     Real(8), Allocatable, Dimension(:,:) :: BubblesRadius, BubblesRiseV, BubblesCarried
     Real(8), Allocatable, Dimension(:,:,:) :: BubblesGasConc, BRVoluAGas, BRRateAGas
-    Real(8), Allocatable, Dimension(:,:) :: BubblesReleaseAllValue, BRRateAGasNet 
+    Real(8), Allocatable, Dimension(:,:) :: BubblesReleaseAllValue, BRRateAGasNet
     Real(8), Allocatable, Dimension(:) :: BottomTurbulence
     !Real(8), Allocatable, Dimension(:) :: IceQSS
     Logical, Allocatable, Dimension(:) :: CrackOpen
     Logical, Allocatable, Dimension(:,:) :: FirstBubblesRelease, BubblesAtSurface
-    
-    
+
+
     Integer(4) CEMAFilN, NumConsolidRegns, CEMASedimentType
     Integer(4) CEMASNPOutFilN, CEMATSR1OutFilN, SegNumI
     Integer(4) CEMABtmLayFilN, TempCntr1
@@ -760,14 +760,14 @@ Module CEMAVars
     Real(8) kFe_oxid, kFe_red, KFeOOH_HalfSat, FeSetVel, KdFe1, KdFe2
     Real(8) kMn_oxid, kMn_red, KMnO2_HalfSat, MnSetVel, KdMn1, KdMn2
     Real(8) TAUCRPOM, crshields, spgrav_POM, dia_POM
-    
+
     Logical CEMARelatedCode, IncludeBedConsolidation, IncludeCEMASedDiagenesis, IncludeFFTLayer, FFTActive, FirstTimeInFFTCode
     Logical IncludeIron, IncludeManganese, IncludeDynamicpH, IncludeAlkalinity, SD_global                                         ! cb 5/22/15
     Logical CEMASedimentProcessesInc, WriteBESnp, WritePWSnp, WriteCEMAMFTSedFlx, CEMA_POM_Resuspension_Processes
     Logical FirstTimeinCEMAMFTSedDiag, MoveFFTLayerDown
     Logical LimBubbSize, UseReleaseFraction, FirstTimeInBubbles, ApplyBubbTurb
     LOGICAL sediment_diagenesis, cao_method
-    
+
     !Generic BOD constituent variables
     Logical IncludeCEMAGenBODConstituents
     Character(6), Allocatable, Dimension(:) :: SedGenBODName
@@ -779,35 +779,35 @@ Module CEMAVars
     Integer, Allocatable, Dimension(:) :: SedGenBODConsRegSegSt, SedGenBODConsRegSegEn
     Integer NumGenBODConstituents, NumGenBODInitRegns, NumGenBODConsumptionRegions
     !End generic BOD constituent variables
-    
-    Real(8), Allocatable, Dimension(:) :: SDRegnH2S_T, SDRegnNH3_T, SDRegnCH4_T        
+
+    Real(8), Allocatable, Dimension(:) :: SDRegnH2S_T, SDRegnNH3_T, SDRegnCH4_T
     Real(8), Allocatable, Dimension(:) :: SDRegnTIC_T, SDRegnALK_T, SDRegnPO4_T
     Real(8), Allocatable, Dimension(:) :: SDRegnFe2_T, SDRegnFeOOH_T, SDRegnMn2_T, SDRegnMnO2_T
     Real(8), Allocatable, Dimension(:) :: SDRegnT_T
     ! CEMA testing variables start
     logical BODtestout
 !    real(8) jnh4zz,odzz,jno3zz,jpo4zz,jsizz,o2zz,nh4zz,no3zz,po4zz,sizz,tempzz  ! CEMA testing variable only
-!    real(8) m1,m2,Dp,w2,Dd ,thtaDp,thtaDd                     !(A) 
-!    real(8) kappnh4 ,pienh4 ,thtanh4 ,kmnh4,thtakmnh4 ,kmnh4o2 
-!    real(8) kapp1no3,k2no3,thtano3 
-!    real(8) kappd1,kappp1,pie1s,pie2s,thtapd1,kmhso2 
-!    real(8) ksi,csisat,dpie1si,pie2si 
-!    real(8) h2ss,thtasi,kmpsi,o2critsi 
-!    real(8) dpie1po4,pie2po4,o2crit,kmo2Dp 
-!    real(8) frpon1,kpon1,thtapon1 
-!    real(8) frpon2,kpon2,thtapon2 
-!    real(8) frpon3,kpon3,thtapon3 
-!    real(8) frpoc1,kpoc1,thtapoc1 
-!    real(8) frpoc2,kpoc2,thtapoc2 
-!    real(8) frpoc3,kpoc3,thtapoc3 
-!    real(8) frpop1,kpop1,thtapop1 
-!    real(8) frpop2,kpop2,thtapop2 
-!    real(8) frpop3,kpop3,thtapop3 
+!    real(8) m1,m2,Dp,w2,Dd ,thtaDp,thtaDd                     !(A)
+!    real(8) kappnh4 ,pienh4 ,thtanh4 ,kmnh4,thtakmnh4 ,kmnh4o2
+!    real(8) kapp1no3,k2no3,thtano3
+!    real(8) kappd1,kappp1,pie1s,pie2s,thtapd1,kmhso2
+!    real(8) ksi,csisat,dpie1si,pie2si
+!    real(8) h2ss,thtasi,kmpsi,o2critsi
+!    real(8) dpie1po4,pie2po4,o2crit,kmo2Dp
+!    real(8) frpon1,kpon1,thtapon1
+!    real(8) frpon2,kpon2,thtapon2
+!    real(8) frpon3,kpon3,thtapon3
+!    real(8) frpoc1,kpoc1,thtapoc1
+!    real(8) frpoc2,kpoc2,thtapoc2
+!    real(8) frpoc3,kpoc3,thtapoc3
+!    real(8) frpop1,kpop1,thtapop1
+!    real(8) frpop2,kpop2,thtapop2
+!    real(8) frpop3,kpop3,thtapop3
 !    real(8) ratiocn,ratiocp,ratiocsi
 !    real(8) xjnh4,jcinzz
 !    real(8) SD_Jctest
     ! CEMA testing variables end
-        
+
   !  Data CEMAFilN  /11/    ! SW 5/26/15
     Data CEMASNPOutFilN /1411/
     Data CEMATSR1OutFilN /1412/
@@ -830,5 +830,5 @@ Module CEMAVars
     Data CEMAOutFilN6/ 1439/
     Data GasConst_R /0.0821/    !L.atm/mol/K
     Data NumGas /4/
-        
+
 End Module CEMAVars
