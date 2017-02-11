@@ -1,4 +1,4 @@
-module mGlobals
+module mGlobals ! w2modules.f90, module GLOBAL (line 91)
 
     use mConstants,                     only : zero
     use mSetPrecision,                  only : ip, sp, rp
